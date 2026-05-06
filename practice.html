@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 실습 통합 과제</title>
+</head>
+<body>
+
+    <h2>실습 1: 제목 글자 변경</h2>
+    <h1 id="title1">처음 제목입니다.</h1>
+    <button id="changeButton">제목 바꾸기</button>
+
+    <hr>
+
+    <h2>실습 2: 스타일 변경</h2>
+    <h1 id="title2">스타일 변경 예제</h1>
+    <button id="styleButton">스타일 바꾸기</button>
+
+    <hr>
+
+    <h2>실습 3: 이미지 속성 변경</h2>
+    <h1>이미지 속성 변경</h1>
+    <img id="image" alt="이미지가 여기에 표시됩니다.">
+    <br><br>
+    <button id="imageButton">이미지 보이기</button>
+
+    <script>
+        
+        let title1 = document.getElementById("title1");
+        let changeButton = document.getElementById("changeButton");
+
+        changeButton.onclick = function () {
+            title1.textContent = "JavaScript로 제목을 바꿨습니다.";
+        };
+
+        let title2 = document.getElementById("title2");
+        let styleButton = document.getElementById("styleButton");
+
+        styleButton.onclick = function () {
+            title2.style.color = "white";
+            title2.style.backgroundColor = "blue";
+            title2.style.padding = "10px";
+        };
+
+        let image = document.getElementById("image");
+        let imageButton = document.getElementById("imageButton");
+
+        imageButton.onclick = function () {
+            image.src = "https://placehold.co/300x200";
+            image.width = 300;
+            image.height = 200;
+        };
+    </script>
+
+</body>
+</html>
